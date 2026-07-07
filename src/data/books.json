@@ -1,5 +1,65 @@
 [
 	{
+		"2026": [
+			{
+				"title": "SPQR",
+				"link": "https://www.goodreads.com/book/show/42442999-spqr",
+				"genres": [
+					"history",
+					"ancient history",
+					"nonfiction"
+				],
+				"status": "2026-06-18T00:00:00.000Z",
+				"author": "Mary Beard"
+			},
+			{
+				"title": "Imperial Twilight: The Opium War and the End of China's Last Golden Age",
+				"link": "https://www.goodreads.com/book/show/40190309-imperial-twilight",
+				"genres": [
+					"history",
+					"china",
+					"nonfiction"
+				],
+				"status": "2026-04-05T00:00:00.000Z",
+				"author": "Stephen R. Platt",
+				"loved": "true"
+			},
+			{
+				"title": "We Have Always Lived in the Castle",
+				"link": "https://www.goodreads.com/book/show/10863361-we-have-always-lived-in-the-castle",
+				"genres": [
+					"horror",
+					"gothic",
+					"classics"
+				],
+				"status": "2026-03-07T00:00:00.000Z",
+				"author": "Shirley Jackson"
+			},
+			{
+				"title": "La biblioteca de los nuevos comienzos",
+				"link": "https://www.goodreads.com/book/show/177329990-la-biblioteca-de-los-nuevos-comienzos",
+				"genres": [
+					"fiction",
+					"contemporary",
+					"japan"
+				],
+				"status": "2026-02-16T00:00:00.000Z",
+				"author": "Michiko Aoyama"
+			},
+			{
+				"title": "The Rise of Endymion (Hyperion Cantos, #4)",
+				"link": "https://www.goodreads.com/book/show/11289.The_Rise_of_Endymion",
+				"genres": [
+					"science fiction",
+					"space opera",
+					"fantasy"
+				],
+				"status": "2026-02-06T00:00:00.000Z",
+				"author": "Dan Simmons"
+			}
+		]
+	},
+	{
 		"2025": [
 			{
 				"title": "Los 70, la década que siempre vuelve",
@@ -187,7 +247,7 @@
 				],
 				"status": "2025-02-28T00:00:00.000Z",
 				"author": "Vaclav Smil"
-			},		
+			},
 			{
 				"title": "Slaughterhouse-Five",
 				"link": "https://www.goodreads.com/book/show/4981.Slaughterhouse_Five",
@@ -198,7 +258,7 @@
 				],
 				"status": "2025-02-15T00:00:00.000Z",
 				"author": "Kurt Vonnegut Jr."
-			},		
+			},
 			{
 				"title": "El Libro de Arena",
 				"link": "https://www.goodreads.com/book/show/929572.El_libro_de_arena",
