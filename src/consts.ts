@@ -1,4 +1,4 @@
-export const SITE_TITLE = "Lucas Ezequiel Ojeda";
-export const MOBILE_SITE_TITLE = "Lucas E. Ojeda";
+export const SITE_TITLE = "lojeda";
+export const MOBILE_SITE_TITLE = "lojeda";
 export const SITE_DESCRIPTION =
-	"His personal web page";
+	"A personal web page of yet another Homo sapiens";
