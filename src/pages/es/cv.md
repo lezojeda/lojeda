@@ -5,10 +5,12 @@ title: 'cv'
 
 [Descargar](/Lucas_E_Ojeda_Resume_ES.pdf)
 
-## experiencia profesional (+6 años)
+## experiencia profesional (+7 años)
 ---
 
 - ### Ago 2024 - actualidad: [Compass](https://www.compass.com/)
+  - Rediseñé la página interna de marketing con vistas en grilla y lista, paginación, filtros múltiples y sistema de carpetas
+  - Entre los 10 principales contribuidores del repositorio frontend durante los primeros dos años (más de 100 colaboradores)
 - ### Ene 2023 - jul 2023: **[Southworks](https://www.southworks.com/)**
   - Migración del servicio **Azure Virtual Desktop** de Microsoft a React
   - Testing e2e de nuevas features del servicio Azure Virtual Desktop

@@ -5,10 +5,11 @@ title: 'resume'
 
 [Download](/Lucas_E_Ojeda_Resume.pdf)
 
-## work experience (+6 years)
+## work experience (+7 years)
 
 - **Compass** (Aug 2024 - Today)
   - Reorganized the  internal marketing page with grid and list view, pagination, multiple filters and folders system
+  - Top-10 contributor to the frontend repository (100+ contributors) in the first two years
 - **Southworks** (Jan 2023 - Jul 2024)
   - Created **Python** scripts using **Selenium** and **BeautifulSoup** to scrape makeup data from various retailers, processed into Excel files.
   - Migrated the **Azure Virtual Desktop** service to React from Knockout JS, implementing and testing new features.
