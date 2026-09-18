@@ -25,7 +25,7 @@ title: 'cv'
 ## educación
 ---
 - [Ciencias de la Computación - Open Source Society University](https://github.com/ossu/computer-science) (abril de 2024 - hoy)
-  - actualmente estudiando: [Diseño de programas basados en clases](https://course.ccs.neu.edu/cs2510sp22/index.html)
+  - actualmente estudiando: [Fundamentales de Ciberseguridad de RIT (Rochester Institute of Technology)](https://www.edx.org/learn/cybersecurity/rochester-institute-of-technology-cybersecurity-fundamentals) y [TryHackMe Cybersecurity 101](https://tryhackme.com/path/outline/cybersecurity101)
 - Ingeniería en Informática - Universidad Argentina de la Empresa (Agosto 2023 - Abril 2024)
 - Licenciatura en Ciencias Biológicas - Universidad de Buenos Aires (UBA) (Abril 2012 - mayo 2019)
 
@@ -58,6 +58,7 @@ title: 'cv'
     * Jest (y React Testing Library)
     * Docker
     * Chronosphere y Datadog
+    * Cypress
   - **Usadas en proyectos personales y cursos:**
     * Express
     * PostgreSQL

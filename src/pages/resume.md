@@ -27,7 +27,7 @@ title: 'resume'
 ## education
 
 - **Computer Science** (Open Source Society University - OSSU) (Apr 2024 - Today)
-  - Currently studying: [Class-based program design](https://course.ccs.neu.edu/cs2510sp22/index.html)
+  - Currently studying: [Cybersecurity Fundamentals de Ciberseguridad](https://www.edx.org/learn/cybersecurity/rochester-institute-of-technology-cybersecurity-fundamentals) from the [RIT (Rochester Institute of Technology)](https://www.rit.edu/) alongside [TryHackMe Cybersecurity 101](https://tryhackme.com/path/outline/cybersecurity101) learning path
 
 - **Software Engineering** (Argentine University of Enterprise - UADE) (Aug 2023 - May 2024)
 
@@ -61,6 +61,7 @@ title: 'resume'
     - Jest (and React Testing Library)
     - Docker
     - Chronosphere y Datadog
+    - Cypress
   - **Used in personal projects/courses:**
     - Express
     - PostgreSQL
