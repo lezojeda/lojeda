@@ -34,3 +34,13 @@
 		background-image: none;
 	}
 }
+
+.web {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(32vw, 336px);
+  height: auto;
+  pointer-events: none;
+  transform: scaleX(-1);
+}

@@ -3,6 +3,7 @@ import Posts from "../components/Posts.astro";
 import Base from "../layouts/Base.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import ghost from '../images/ghost.gif';
+import spider from '../images/spider.svg';
 
 const posts: CollectionEntry<"blog">[] = await getCollection("blog", ({ id, data }) => {
 	const shouldShowDraft = import.meta.env.PROD ? data.draft !== true : true;
@@ -12,5 +13,6 @@ const posts: CollectionEntry<"blog">[] = await getCollection("blog", ({ id, data
 
 <Base>
 	<img class="ghost" src={ghost.src} alt="Cute ghost floating around" width="150"/>
+	<img class="web" src={spider.src} alt="" width="280" height="280">
 	<Posts posts={posts} />
 </Base>
