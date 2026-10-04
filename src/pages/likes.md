@@ -51,7 +51,8 @@ title: 'likes'
 - [Just Like Heaven - The Cure](https://youtu.be/n3nPiBai66M?si=qRFzxtmgIhNNPy_Q)
 - [The End of The World - Skeeter Davis](https://www.youtube.com/watch?v=DsY_kocbWaM)
 - [Invincible - TOOL](https://www.youtube.com/watch?v=hxsld16TjSU)
-- Disintegration - The Cure
+- [Disintegration - The Cure](https://www.youtube.com/watch?v=__EVr7CF3Hw)
+- [Infohazard - Ninajirachi](https://youtu.be/p2ZdeIKJA8c?si=4BjdRoSuhgs7s9-n)
 
 ## movies/tv series
 - Interstellar from Christopher Nolan
