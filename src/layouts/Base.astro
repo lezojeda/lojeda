@@ -4,8 +4,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getLangFromUrl } from "../i18n/utils";
 
 import { checkMonth } from "../utils/checkMonth";
-import halloween from "../images/halloween.jpg";
-import { getImage } from "astro:assets";
+import ghost from "../images/ghost.gif";
+import spider from "../images/spider.svg";
 
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
@@ -19,6 +19,7 @@ const lang = getLangFromUrl(Astro.url);
 const { frontmatter, title, fullWidthMain = false } = Astro.props;
 const headTitle =
 	title || frontmatter?.title ? `${SITE_TITLE} - ${title || frontmatter?.title}` : SITE_TITLE;
+const isHalloween = checkMonth(9);
 ---
 
 <html lang={lang}>
@@ -66,7 +67,20 @@ const headTitle =
 		<BaseHead title={headTitle} description={SITE_DESCRIPTION} />
 	</head>
 
-	<body class={checkMonth(9) ? "halloween-background" : ""}>
+	<body class={isHalloween ? "halloween-background" : ""}>
+		{
+			isHalloween && (
+				<>
+					<img
+						class="ghost"
+						src={ghost.src}
+						alt="Cute ghost floating around"
+						width="150"
+					/>
+					<img class="web" src={spider.src} alt="" width="280" height="280" />
+				</>
+			)
+		}
 		<Header />
 		<main class:list={[{ fullWidth: fullWidthMain }]}>
 			<slot />

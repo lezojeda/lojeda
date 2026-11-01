@@ -23,4 +23,4 @@ To be continuously updated:
 - Fruit: Strawberry
 - Comfort food: Spaghetti with butter and grated parmesan cheese
 - Candies (can't pick one): Skittles (**wild berry**, the violets), Pico Dulce and Mogul
-- Season: like them all the same
+- Season: winter and summer in Patagonia, autumn and spring between 38°S and 38°N of latitude
