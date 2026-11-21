@@ -37,21 +37,7 @@ export function getRouteFromUrl(url: URL): string | undefined {
 	}
 
 	const currentLang = getLangFromUrl(url);
+	const currentRoutes = routes[currentLang] ?? {};
 
-	if (defaultLang === currentLang) {
-		const route = Object.values(routes)[0];
-		return route[path] !== undefined ? route[path] : undefined;
-	}
-
-	const getKeyByValue = (obj: Record<string, string>, value: string): string | undefined => {
-		return Object.keys(obj).find(key => obj[key] === value);
-	};
-
-	const reversedKey = getKeyByValue(routes[currentLang], path);
-
-	if (reversedKey !== undefined) {
-		return reversedKey;
-	}
-
-	return undefined;
+	return Object.keys(currentRoutes).find(key => currentRoutes[key] === path);
 }

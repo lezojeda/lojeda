@@ -20,6 +20,15 @@ const microblog = defineCollection({
 	}),
 });
 
+const poems = defineCollection({
+	type: "content",
+	schema: z.object({
+		title: z.string().optional(),
+		author: z.string().optional(),
+		pubDate: z.coerce.date().optional(),
+	}),
+});
+
 const pictures = defineCollection({
 	type: "data",
 	schema: ({ image }) =>
@@ -31,4 +40,4 @@ const pictures = defineCollection({
 		}),
 });
 
-export const collections = { blog, microblog, pictures };
+export const collections = { blog, microblog, poems, pictures };

@@ -1,0 +1,183 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const entries: CollectionEntry<"poems">[] = await getCollection("poems", ({ id }) =>
+	id.startsWith(`${lang}/`)
+);
+
+function titleFromSlug(slug: string) {
+	const name = slug.split("/").pop() ?? slug;
+	return name.replace(/[-_]/g, " ");
+}
+
+// frontmatter dates are parsed as UTC midnight, so they are shown in UTC to
+// keep `pubDate: 2025-01-14` displayed as jan 14 instead of the day before
+function formatPubDate(pubDate: Date) {
+	return pubDate
+		.toLocaleDateString(lang, {
+			timeZone: "UTC",
+			month: "short",
+			day: "numeric",
+			year: "numeric",
+		})
+		.toLowerCase();
+}
+
+const poems = entries
+	.map(entry => ({
+		slug: entry.slug.split("/").pop() ?? entry.slug,
+		title: entry.data.title,
+		// untitled poems get no heading, but the index still needs a label
+		label: entry.data.title ?? titleFromSlug(entry.slug),
+		author: entry.data.author,
+		pubDate: entry.data.pubDate,
+		entry,
+	}))
+	.sort((a, b) => a.label.localeCompare(b.label, lang));
+---
+
+<a class="see-poems" href="#poem-index">{t("poems.see")}</a>
+
+<nav id="poem-index" class="poem-index" aria-label={t("poems.index")}>
+	<ul class="no-style-list poem-grid">
+		{
+			poems.map(poem => (
+				<li>
+					<a href={`#${poem.slug}`}>{poem.label}</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+<div class="poems">
+	{
+		poems.map(async poem => {
+			const { Content } = await poem.entry.render();
+			return (
+				<article class="poem" id={poem.slug}>
+					<h2>{poem.title ?? t("poems.untitled")}</h2>
+					{(poem.author || poem.pubDate) && (
+						<p class="poem-meta">
+							{poem.author && (
+								<span class="poem-author">
+									{t("by")} {poem.author}
+								</span>
+							)}
+							{poem.author && poem.pubDate && (
+								<span aria-hidden="true">·</span>
+							)}
+							{poem.pubDate && (
+								<time datetime={poem.pubDate.toISOString()}>
+									{formatPubDate(poem.pubDate)}
+								</time>
+							)}
+						</p>
+					)}
+					<div class="poem-body">
+						<Content />
+					</div>
+					<a class="back-to-index" href="#poem-index">
+						↑ {t("poems.back")}
+					</a>
+				</article>
+			);
+		})
+	}
+</div>
+
+<style lang="scss">
+	@import "../styles/variables.scss";
+
+	.see-poems {
+		display: inline-block;
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		margin-bottom: var(--space-lg);
+		padding: var(--space-xs) var(--space-md);
+		text-decoration: none;
+		transition: border-color 0.1s ease;
+
+		&:hover {
+			border-color: var(--link);
+		}
+	}
+
+	.poem-index {
+		border-bottom: 1px solid var(--border);
+		margin-bottom: var(--space-xl);
+		padding-bottom: var(--space-md);
+		scroll-margin-top: var(--space-md);
+	}
+
+	.poem-grid {
+		columns: 3;
+		column-gap: var(--space-lg);
+		margin: 0;
+		padding: 0;
+
+		li {
+			break-inside: avoid;
+			margin-bottom: var(--space-sm);
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		@media (max-width: $tablet) {
+			columns: 2;
+		}
+
+		@media (max-width: $mobile) {
+			columns: 1;
+		}
+	}
+
+	.poem {
+		margin-bottom: var(--space-xxl);
+		scroll-margin-top: var(--space-md);
+
+		h2 {
+			margin-bottom: var(--space-md);
+			word-break: break-word;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.poem-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-xs);
+		font-size: var(--text-sm);
+		margin-bottom: var(--space-md);
+	}
+
+	.poem-body {
+		p {
+			white-space: pre-wrap;
+		}
+	}
+
+	.back-to-index {
+		display: inline-block;
+		font-size: var(--text-sm);
+		margin-top: var(--space-md);
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+</style>

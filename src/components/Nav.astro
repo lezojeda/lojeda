@@ -21,6 +21,11 @@ const translatePath = useTranslatedPath(lang);
             </NavLink>
         </li>
         <li>
+            <NavLink href={translatePath("/poems")}>
+                {t("nav.poems")}
+            </NavLink>
+        </li>
+        <li>
             <NavLink href={translatePath("/reading")}>
                 {t("nav.reading")}
             </NavLink>

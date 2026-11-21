@@ -1,0 +1,17 @@
+---
+import PoemsComponent from "../components/Poems.astro";
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="poems">
+	<h1>poems</h1>
+	<p class="poem-subtitle">that I like</p>
+	<PoemsComponent />
+</Base>
+
+<style>
+	.poem-subtitle {
+		margin-top: calc(-1 * var(--space-md));
+		margin-bottom: var(--space-lg);
+	}
+</style>
