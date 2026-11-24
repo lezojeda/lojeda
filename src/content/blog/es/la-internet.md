@@ -2,6 +2,7 @@
 title: "La internet ya no es más un lugar especial"
 pubDate: 2026-11-26
 tags: ["personal"]
+draft: true
 ---
 
 TLDR: el mundo virtual es cada vez más grande, y su crecimiento sea quizás en desmedro del real/físico y cuanto más crezca se hace menos especial se hace
