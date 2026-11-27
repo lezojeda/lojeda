@@ -1,5 +1,5 @@
 ---
-title: Dos Planetas
+title: Avanti
 author: Pedro Bonifacio Palacios "Almafuerte"
 ---
 Si te postran diez veces, te levantas
